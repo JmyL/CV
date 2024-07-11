@@ -1,0 +1,489 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7, 9 August 2023) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+% \colorlet{heading}{DarkPastelRed}
+% \colorlet{headingrule}{GoldenEarth}
+% \colorlet{subheading}{PastelRed}
+% \colorlet{accent}{PastelRed}
+% \colorlet{emphasis}{SlateGrey}
+% \colorlet{body}{LightGrey}
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelBlue}{HTML}{0A4D8E}
+\definecolor{PastelBlue}{HTML}{1C6BA0}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelBlue}
+\colorlet{heading}{DarkPastelBlue}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelBlue}
+\colorlet{accent}{PastelBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Sungsik Nam}
+\tagline{Engineer specialized in Deep Learning and Embedded C/C++\\with Process/Team Management Experience in Mobile Industries}
+%% You can add multiple photos on the left or right
+\photoR{3.4cm}{profile}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{jmyl@me.com}
+  \phone{+49 151 4139 7269}
+  \mailaddress{Driesener Str. 8A, 10439 Berlin}
+  \location{Berlin, Germany}
+  \homepage{jmyl.github.io}
+  \github{jmyl}
+  \linkedin{sungsik-nam}
+  % \twitter{@twitterhandle}
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.57}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+  \cvevent{Deep Learning Engineer}{VUERON}{Feb 2023 -- Present}{Munich, Germany (Home Office)}
+  \begin{itemize}
+    \item Chose, trained LiDAR object detection network
+    \item Implemented and evaluated knowledge distillation
+    \item Implemented real-time end-to-end object detection
+  \end{itemize}
+
+  \divider
+
+  \cvevent{Principal Software Engineer}{CREATZ}{Jun 2020 -- Jan 2023}{Seoul, South Korea}
+  \begin{itemize}
+    \item Managed a research for detecting the rotation of golf ball
+    \item Designed image processing sequences and kernels
+    % \item Developed IP-cam streaming \& recording library
+  \end{itemize}
+
+  \divider
+
+  \cvevent{Principal Engineer}{MELFAS}{Jul 2005 -- Aug 2019}{Pangyo, South Korea}
+  \begin{itemize}
+    \item Managed projects, providing touchscreen IC to Samsung
+    \item Led a team of 20 engineers
+    \item Invented key algorithms and panel structures,\\
+      \smallskip
+      \textbf{\color{emphasis}filed 7 patents with 6 as the first inventor}
+  \end{itemize}
+
+\medskip
+
+\cvsection{Projects}
+
+% \item 3D OD(VoxelNeXt) to 2D(CenterPoint) knowledge distillation 
+  \cvproject{Research: VoxelNeXt to CenterPoint KD in Python}{}{}{}
+  \begin{itemize}
+    \item mAP increased by 0.5
+    \item Wrote knowledge distillation code with OpenPCDet
+    \item Wrote network-comparison platform with Pandas \& Quarto
+  \end{itemize}
+
+  \smallskip
+ 
+  % \cvproject{Research: OD with Conventional Methods in C}{}{}{}
+  % \begin{itemize}
+  %   \item Wrote ground-plane detection and object clustering algorithm
+  %   \item Wrote and enhanced bounding-box determination algorithm
+  % \end{itemize}
+  %
+  % \smallskip
+  %
+  \cvproject{CenterPoint on TI board with C++}{}{}{}
+  \begin{itemize}
+    \item Evaluated 8-bit quantized model (on going)
+    \item Made network compilable by:
+    \smallskip
+    \begin{itemize}
+      \item fusing MLP+BatchNorm into 1x1 Conv
+      \item replace unsupported layer with supported one% like 1x1 ConvTranspose \& Tile
+  \end{itemize}
+    \item Built library for TDA4VM with ONNXRuntime in C++
+  \end{itemize}
+
+  \smallskip
+
+  \cvproject{CenterPoint on NVIDIA/Intel Platform with C++}{}{}{}
+  \begin{itemize}{}{}{}
+    \item Developed DL inference code with TensorRT/OpenVINO
+    \item Wrote voxelize, encode, scatter, NMS with CUDA/SYCL
+  \end{itemize}
+
+  \smallskip
+
+  \cvproject{Research: Ball Spin Calculation Using Dimples in Python}{}{}{}
+  \begin{itemize}
+    \item Designed and implemented test loop with 3D ball model
+    \item Designed 2D convolution kernels and wrote image processing code to determine center position of dimples
+  \end{itemize}
+
+  \smallskip
+ 
+  % \cvproject{Protocol Converter: USB3 to GigE-V in C}{}{}{}
+  % \begin{itemize}
+  %   \item On Raspberry Pi
+  %   \item Use opensource code to emulate GigE-V host
+  % \end{itemize}
+  %
+  % \smallskip
+ 
+  % \cvproject{IP Camera Control/Streaming in C++}{}{}{}
+  % \begin{itemize}
+  %   \item With LIVE555 library
+  %   \item Controled an IP camera via CGI API
+  %   \item Received RTSP streams, stored the streams
+  % \end{itemize}
+  %
+  % \smallskip
+  \medskip
+ 
+  \cvproject{Touchscreen Research with Clients}{}{}{}
+  \begin{itemize}
+    \item Led on-cell touchscreen research With Samsung Display
+    \item Led active-type digitizer research With LG Display
+    \item Led single-layer touchscreen proejct with SHARP
+  \end{itemize}
+
+  \smallskip
+
+  \cvproject{Touch IC firmware development}{}{}{}
+  \begin{itemize}
+    \item Brought up 15 ICs in MELFAS
+    \item Wrote bootloader and real-time (120Hz) bare-metal firmware for Cortex-M series IC
+    \item Designed tuning method of analog peripherals
+  \end{itemize}
+
+
+\cvsection{Patents}
+
+  \cvevent{U.S. Patent US9921693B2}{Method for Processing Multi-Touch}{Mar 20, 2018}{also in China \& Korea}
+
+  \begin{itemize}
+  \item Distinguishing between single finger with wide area and double fingers with narrow spacing
+  \item Satisfying Microsoft Windows 10 HLK and Samsung's high-level criteria
+  \item Adapted as a touch solution for Samsung's high-end models and LG Display's Windows laptops 
+  \end{itemize}
+  \medskip
+
+  \cvevent{U.S. Patent US9164635B2}{Method of Controlling Noise of Touch}{Oct 20, 2015}{also in China}
+  \begin{itemize}
+  \item Invented sensing frequency drifting method, using anti-aliasing positive way
+  \item Adapted as a touch solution for Samsung Display's on-cell touchscreen buisiness
+  \end{itemize}
+  \medskip
+
+  \cvevent{China Patent CN101925872B}{Touch Panel having a Split-Electrode}{Jun 25, 2014}{also in Japan \& Korea}
+
+  \begin{itemize}
+  \item Designed one-layer panel pattern for single touch
+  \item Became the standard form for affordable single-touch support touchscreens
+  \end{itemize}
+  \medskip
+
+  \cvevent{U.S. Patent US9690436B2}{Touch Panel using Single-Layer Pattern}{Jun 27, 2017}{also in China}
+
+  \begin{itemize}
+  \item Designed one-layer panel pattern for multi touch
+  \item Invented a sensing method to detect pad with big resistance
+  \item Adapted as a standard single-layer pattern for MELFAS's ITO touchscreen panels
+  \end{itemize}
+  \medskip
+
+  \cvevent{U.S. Patent US11221715B2}{Method for Measuring Touch Pressure With Touch Pannel}{Jan 11, 2022}{also in China \& Korea}
+  \medskip
+
+  \cvevent{U.S. Patent US10067611B2}{Apparatus and Method for Detecting a Touch with Compensating Position Distortion due to the Panel Bending}{Sep 4, 2018}{also in Korea}
+  \medskip
+
+  \cvevent{China Patent CN101983371B}{Touch Panel with Improved Edge Position Recognition Characteristics, by Shiwon Ryu and I}{Apr 9, 2014}{also in Korea}
+  \medskip
+
+% \cvsection{A Day of My Life}
+%
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% \cvsection{Publications}
+%
+% %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+% %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% %% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+% \mynames{Lim/Lian\bibnamedelima Tze,
+%   Wong/Lian\bibnamedelima Tze,
+%   Lim/Tracy,
+%   Lim/L.\bibnamedelimi T.}
+% %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+%
+% \nocite{*}
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%
+% \divider
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+%
+% \divider
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Dev Philosophy}
+
+\begin{quote}
+\normalsize
+``You can’t manage what you can’t measure.''\\
+``People over assets.''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faTrophy}{Deep Understanding of DL Networks}{Reviewed many papers on 2D \& 3D OD domain, contributed choosing DL networkfor 3D object detection}
+
+\cvachievement{\faTrophy}{Open to New Technology}{Implemented End-to-end OD with SYCL \& OpenVINO on Intel Platform, reducing latency to 24\% of its original level}
+
+\cvachievement{\faTrophy}{Creative Problem Solving}{As a pioneer in the touch screen industry, invented key algorithms, including Patent US9921693B2}
+
+\cvachievement{\faTrophy}{Management Experience}{Managed 20 engineers as a tech lead, managed S/W development process, with satisfying Samsung for 14 years}
+
+\cvachievement{\faTrophy}{Proficiency in Handling Dev Environment}{Set up dev-containers, CI/CD, c++ unit test with googletest and CTest, and CMake build system in a modern and efficient way}
+
+\cvsection{Strengths}
+
+Languages
+\smallskip
+
+\cvtag{C/C++}
+\cvtag{Python}
+\cvtag{SYCL}
+\cvtag{CUDA}\\
+\cvtag{R}
+\cvtag{Matlab}
+
+\smallskip
+Python Libraries
+\smallskip
+
+\cvtag{PyTorch}
+\cvtag{Numpy}
+\cvtag{Pandas}
+\cvtag{Seaborn}
+\cvtag{ONNX-GraphSurgeon}
+
+\smallskip
+C++ Libraries
+\smallskip
+
+\cvtag{C++ stdlib}
+\cvtag{containers}
+\cvtag{ONNXRuntime}
+\cvtag{OpenVINO}
+\cvtag{OpenCV}
+\cvtag{OpenMP}
+
+\smallskip
+CI/CD
+\smallskip
+
+\cvtag{GoogleTest}
+\cvtag{CTest}
+\cvtag{CDash}
+\cvtag{Gitlab CI}\\
+\cvtag{Github Actions}
+\cvtag{Bitbucket Pipeline}
+
+\smallskip
+Etc.
+\smallskip
+
+\cvtag{Docker}
+\cvtag{Docker Compose}
+\cvtag{Quarto}\\
+\cvtag{Modern CMake}
+\cvtag{Bash Script}
+\cvtag{Neovim}
+
+\cvsection{Favorite Books}
+
+\begin{itemize}
+\item Pragmatic Programmer - Thomas \& Hunt
+\item How to Know a Person - Brooks
+\end{itemize}
+
+\cvsection{Languages}
+
+\cvskill{Korean - native}{5}
+\medskip
+\cvskill{English - C1}{4}
+\medskip
+\cvskill{German - C1}{4} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Statistics (3 Semesters)}{TU Dortmund}{Oct 2021 -- Feb 2023}{}
+
+Learned mathematics and statistics to fully understand DL networks
+
+\medskip
+
+\cvevent{B.Eng.\ in Electrical and Electronics Engineering}{Seoul National University}{Mar 2002 -- Feb 2006}{}
+
+\medskip
+
+
+% \divider
+
+% \cvsection{Referees}
+%
+% % \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+%
+% \divider
+%
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
+
+
+\end{paracol}
+
+
+\end{document}
