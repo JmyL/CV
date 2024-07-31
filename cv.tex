@@ -110,7 +110,7 @@
 
 \begin{document}
 \name{Sungsik Nam}
-\tagline{Engineer specialized in Deep Learning and Embedded C/C++\\with Process/Team Management Experience in Mobile Industries}
+\tagline{Engineer specialized in Embedded C/C++ and Deep Learning\\with Process/Team Management Experience in Mobile Industries}
 %% You can add multiple photos on the left or right
 \photoR{3.4cm}{profile}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
@@ -122,8 +122,9 @@
   \mailaddress{Driesener Str. 8A, 10439 Berlin}
   \location{Berlin, Germany}
   \homepage{jmyl.github.io}
-  \github{jmyl}
+  % \github{jmyl}
   \linkedin{sungsik-nam}
+  % \inkedin{sungsik-nam}
   % \twitter{@twitterhandle}
   % \orcid{0000-0000-0000-0000}
   %% You can add your own arbitrary detail with
@@ -161,29 +162,30 @@
 
   \cvevent{Deep Learning Engineer}{VUERON}{Feb 2023 -- Present}{Munich, Germany (Home Office)}
   \begin{itemize}
-    \item Chose, trained LiDAR object detection network
+    \item Implemented real-time end-to-end object detection with C++, CUDA, SYCL(oneAPI), TensorRT and OpenVINO
+    \item Chose, trained LiDAR object detection network with PyTorch
     \item Implemented and evaluated knowledge distillation
-    \item Implemented real-time end-to-end object detection
   \end{itemize}
 
   \divider
 
-  \cvevent{Principal Software Engineer}{CREATZ}{Jun 2020 -- Jan 2023}{Seoul, South Korea}
+  \cvevent{Principal C++ Software Engineer}{CREATZ}{Jun 2020 -- Jan 2023}{Seoul, South Korea}
   \begin{itemize}
-    \item Managed a research for detecting the rotation of golf ball
-    \item Designed image processing sequences and kernels
+    \item Led the research and designed/implemented test flow for detecting the rotation of golf ball
+    \item Designed image processing sequences and kernels with Python
+    \item Developed IP-Cam streaming \& recording library with C++
     % \item Developed IP-cam streaming \& recording library
   \end{itemize}
 
   \divider
 
-  \cvevent{Principal Engineer}{MELFAS}{Jul 2005 -- Aug 2019}{Pangyo, South Korea}
+  \cvevent{Principal Embedded C Engineer}{MELFAS}{Jul 2005 -- Aug 2019}{Pangyo, South Korea}
   \begin{itemize}
-    \item Managed projects, providing touchscreen IC to Samsung
+    \item Managed touchscreen firmware development projects(ARM Cortex-M Series bare-metal firmware), providing touchscreen IC to Samsung
+    \item Invented key algorithms with C language and panel structures, filed 7 patents with 6 as the first inventor
     \item Led a team of 20 engineers
-    \item Invented key algorithms and panel structures,\\
-      \smallskip
-      \textbf{\color{emphasis}filed 7 patents with 6 as the first inventor}
+    \item Trained team employees through numerous seminars.
+    \item Setup CI
   \end{itemize}
 
 \medskip
@@ -198,7 +200,7 @@
     \item Wrote network-comparison platform with Pandas \& Quarto
   \end{itemize}
 
-  \smallskip
+  \divider
  
   % \cvproject{Research: OD with Conventional Methods in C}{}{}{}
   % \begin{itemize}
@@ -220,7 +222,7 @@
     \item Built library for TDA4VM with ONNXRuntime in C++
   \end{itemize}
 
-  \smallskip
+  \divider
 
   \cvproject{CenterPoint on NVIDIA/Intel Platform with C++}{}{}{}
   \begin{itemize}{}{}{}
@@ -228,7 +230,7 @@
     \item Wrote voxelize, encode, scatter, NMS with CUDA/SYCL
   \end{itemize}
 
-  \smallskip
+  \divider
 
   \cvproject{Research: Ball Spin Calculation Using Dimples in Python}{}{}{}
   \begin{itemize}
@@ -236,25 +238,24 @@
     \item Designed 2D convolution kernels and wrote image processing code to determine center position of dimples
   \end{itemize}
 
-  \smallskip
+  \divider
  
-  % \cvproject{Protocol Converter: USB3 to GigE-V in C}{}{}{}
-  % \begin{itemize}
-  %   \item On Raspberry Pi
-  %   \item Use opensource code to emulate GigE-V host
-  % \end{itemize}
-  %
-  % \smallskip
+  \cvproject{Protocol Converter: USB3 to GigE-V in C}{}{}{}
+  \begin{itemize}
+    \item On Raspberry Pi
+    \item Use opensource code to emulate GigE-V host
+  \end{itemize}
+
+  \divider
  
-  % \cvproject{IP Camera Control/Streaming in C++}{}{}{}
-  % \begin{itemize}
-  %   \item With LIVE555 library
-  %   \item Controled an IP camera via CGI API
-  %   \item Received RTSP streams, stored the streams
-  % \end{itemize}
-  %
-  % \smallskip
-  \medskip
+  \cvproject{IP Camera Control/Streaming in C++}{}{}{}
+  \begin{itemize}
+    \item With LIVE555 library
+    \item Controled an IP camera via CGI API
+    \item Received RTSP streams, stored the streams
+  \end{itemize}
+
+  \divider
  
   \cvproject{Touchscreen Research with Clients}{}{}{}
   \begin{itemize}
@@ -263,7 +264,7 @@
     \item Led single-layer touchscreen proejct with SHARP
   \end{itemize}
 
-  \smallskip
+  \divider
 
   \cvproject{Touch IC firmware development}{}{}{}
   \begin{itemize}
@@ -279,17 +280,20 @@
 
   \begin{itemize}
   \item Distinguishing between single finger with wide area and double fingers with narrow spacing
+  \item Sugested continuous criteria from extremely low resolution(e.g. 12x30) grayscale input image
   \item Satisfying Microsoft Windows 10 HLK and Samsung's high-level criteria
   \item Adapted as a touch solution for Samsung's high-end models and LG Display's Windows laptops 
   \end{itemize}
-  \medskip
+
+  \divider
 
   \cvevent{U.S. Patent US9164635B2}{Method of Controlling Noise of Touch}{Oct 20, 2015}{also in China}
   \begin{itemize}
   \item Invented sensing frequency drifting method, using anti-aliasing positive way
   \item Adapted as a touch solution for Samsung Display's on-cell touchscreen buisiness
   \end{itemize}
-  \medskip
+
+  \divider
 
   \cvevent{China Patent CN101925872B}{Touch Panel having a Split-Electrode}{Jun 25, 2014}{also in Japan \& Korea}
 
@@ -297,7 +301,8 @@
   \item Designed one-layer panel pattern for single touch
   \item Became the standard form for affordable single-touch support touchscreens
   \end{itemize}
-  \medskip
+
+  \divider
 
   \cvevent{U.S. Patent US9690436B2}{Touch Panel using Single-Layer Pattern}{Jun 27, 2017}{also in China}
 
@@ -306,16 +311,20 @@
   \item Invented a sensing method to detect pad with big resistance
   \item Adapted as a standard single-layer pattern for MELFAS's ITO touchscreen panels
   \end{itemize}
-  \medskip
+
+  \divider
 
   \cvevent{U.S. Patent US11221715B2}{Method for Measuring Touch Pressure With Touch Pannel}{Jan 11, 2022}{also in China \& Korea}
-  \medskip
+
+  \divider
 
   \cvevent{U.S. Patent US10067611B2}{Apparatus and Method for Detecting a Touch with Compensating Position Distortion due to the Panel Bending}{Sep 4, 2018}{also in Korea}
-  \medskip
+
+  \divider
 
   \cvevent{China Patent CN101983371B}{Touch Panel with Improved Edge Position Recognition Characteristics, by Shiwon Ryu and I}{Apr 9, 2014}{also in Korea}
-  \medskip
+
+  \divider
 
 % \cvsection{A Day of My Life}
 %
@@ -361,39 +370,99 @@
 %% page if the content is too long.
 \switchcolumn
 
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Statistics (3 Semesters)}{TU Dortmund}{Oct 2021 -- Feb 2023}{}
+
+Learned mathematics and statistics to fully understand DL networks
+
+\divider
+
+\cvevent{B.Eng.\ in Electrical and Electronics Engineering}{Seoul National University}{Mar 2002 -- Feb 2006}{}
+
+\cvsection{Languages}
+
+\cvskill{Korean - native}{5}
+
+\divider
+
+\cvskill{English - C1}{4}
+
+\divider
+
+\cvskill{German - C1}{4} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+
+
 \cvsection{My Dev Philosophy}
 
 \begin{quote}
 \normalsize
 ``You can’t manage what you can’t measure.''\\
+\medskip
 ``People over assets.''
 \end{quote}
 
+\medskip
+
+\cvsection{Favorite Books}
+
+\begin{itemize}
+\item Pragmatic Programmer - Thomas \& Hunt
+\item How to Know a Person - Brooks
+\end{itemize}
+
+\medskip
+
 \cvsection{Most Proud of}
+
+\cvachievement{\faTrophy}{Creative Problem Solving}{As a pioneer in the touch screen industry, invented key algorithms, 7 patents including US9921693B2}
+
+\divider 
 
 \cvachievement{\faTrophy}{Deep Understanding of DL Networks}{Reviewed many papers on 2D \& 3D OD domain, contributed choosing DL networkfor 3D object detection}
 
+\divider 
+
 \cvachievement{\faTrophy}{Open to New Technology}{Implemented End-to-end OD with SYCL \& OpenVINO on Intel Platform, reducing latency to 24\% of its original level}
 
-\cvachievement{\faTrophy}{Creative Problem Solving}{As a pioneer in the touch screen industry, invented key algorithms, including Patent US9921693B2}
+\bigskip
+\divider 
+
+\cvachievement{\faTrophy}{Test Lover}{TDD enthusiast, write C++ unit test with googletest and CTest}
+
+\divider 
+
+\cvachievement{\faTrophy}{Passion for Documentation}{Wrote well-crafted technical documents with asciidoc and drew chart with mermaid, big fan of quarto with revealjs}
+
+\divider 
+
+\cvachievement{\faTrophy}{Proficiency in Handling Dev Environment}{Dev-containers, CI/CD and CMake build system in a modern and efficient way}
+
+\divider 
 
 \cvachievement{\faTrophy}{Management Experience}{Managed 20 engineers as a tech lead, managed S/W development process, with satisfying Samsung for 14 years}
 
-\cvachievement{\faTrophy}{Proficiency in Handling Dev Environment}{Set up dev-containers, CI/CD, c++ unit test with googletest and CTest, and CMake build system in a modern and efficient way}
+\medskip
 
 \cvsection{Strengths}
 
-Languages
+Programming Languages
 \smallskip
 
-\cvtag{C/C++}
+\cvtag{C}
+\cvtag{C++}
 \cvtag{Python}
 \cvtag{SYCL}
 \cvtag{CUDA}\\
 \cvtag{R}
 \cvtag{Matlab}
 
-\smallskip
+\divider
+
 Python Libraries
 \smallskip
 
@@ -403,18 +472,19 @@ Python Libraries
 \cvtag{Seaborn}
 \cvtag{ONNX-GraphSurgeon}
 
-\smallskip
+\divider
+
 C++ Libraries
 \smallskip
 
 \cvtag{C++ stdlib}
-\cvtag{containers}
 \cvtag{ONNXRuntime}
 \cvtag{OpenVINO}
 \cvtag{OpenCV}
 \cvtag{OpenMP}
 
-\smallskip
+\divider
+
 CI/CD
 \smallskip
 
@@ -425,7 +495,8 @@ CI/CD
 \cvtag{Github Actions}
 \cvtag{Bitbucket Pipeline}
 
-\smallskip
+\divider
+
 Etc.
 \smallskip
 
@@ -434,40 +505,8 @@ Etc.
 \cvtag{Quarto}\\
 \cvtag{Modern CMake}
 \cvtag{Bash Script}
-\cvtag{Neovim}
-
-\cvsection{Favorite Books}
-
-\begin{itemize}
-\item Pragmatic Programmer - Thomas \& Hunt
-\item How to Know a Person - Brooks
-\end{itemize}
-
-\cvsection{Languages}
-
-\cvskill{Korean - native}{5}
-\medskip
-\cvskill{English - C1}{4}
-\medskip
-\cvskill{German - C1}{4} %% Supports X.5 values.
-
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vspace etc to make adjustments.
-\medskip
-
-\cvsection{Education}
-
-\cvevent{B.Sc.\ in Statistics (3 Semesters)}{TU Dortmund}{Oct 2021 -- Feb 2023}{}
-
-Learned mathematics and statistics to fully understand DL networks
-
-\medskip
-
-\cvevent{B.Eng.\ in Electrical and Electronics Engineering}{Seoul National University}{Mar 2002 -- Feb 2006}{}
-
-\medskip
-
+\cvtag{Neovim}\\
+\cvtag{Linux}
 
 % \divider
 
